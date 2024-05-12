@@ -44,7 +44,7 @@ app.get('/products', (req, res) => {
 
 app.get('/contact', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/contact.html'));
+	res.sendFile(path.join(__dirname, '/templates/contactus.html'));
 });
 
 app.post('/contact', (req, res) => {

@@ -1,14 +1,27 @@
 {
-  "name": "express-website",
+  "name": "express_website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website with nodejs and expressjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maha-I-Hendawy/Express_Website.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Maha Hendawy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maha-I-Hendawy/Express_Website/issues"
+  },
+  "homepage": "https://github.com/Maha-I-Hendawy/Express_Website#readme",
   "dependencies": {
     "express": "^4.19.2"
   }
