@@ -5,15 +5,27 @@ const app = express();
 const path = require("path");
 
 
+var mysql = require('mysql');
+
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, "views"));
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+
+
+
 
 // this is the home page
 
 app.get('/', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/home.html')); 
+
+	res.render('home');
+    
 
 });
 
@@ -22,7 +34,11 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/about.html'));
+	
+
+	res.render('about');
+
+	
 });
 
 
@@ -30,21 +46,22 @@ app.get('/about', (req, res) => {
 
 app.get('/services', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/services.html'))
+	res.render('services');
 })
 
 // this is the products page
 
 app.get('/products', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/products.html'))
+	res.render('products');
 })
 
 // this is the contact us page
 
 app.get('/contact', (req, res) => {
 
-	res.sendFile(path.join(__dirname, '/templates/contactus.html'));
+	res.render('contactus')
+
 });
 
 app.post('/contact', (req, res) => {
@@ -53,11 +70,17 @@ app.post('/contact', (req, res) => {
 	email = req.body.email;
 	msg = req.body.message;
 
+
 	console.log(name);
 	console.log(email);
 	console.log(msg);
 
+
+	
+  
+
 	res.redirect('/');
+
 })
 
 
