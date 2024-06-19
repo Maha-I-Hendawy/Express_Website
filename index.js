@@ -66,12 +66,12 @@ app.get('/contact', (req, res) => {
 
 app.post('/contact', (req, res) => {
 
-	name = req.body.name;
+	sender = req.body.sender;
 	email = req.body.email;
-	msg = req.body.message;
+	msg = req.body.msg;
 
 
-	console.log(name);
+	console.log(sender);
 	console.log(email);
 	console.log(msg);
 
